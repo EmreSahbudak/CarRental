@@ -24,4 +24,8 @@ public class CarService extends ServiceManager<Car,Long> {
     public List<Car> findAllByNameContainingIgnoreCase(String name){
         return carRepository.findAllByNameContainingIgnoreCase(name);
     }
+
+    public List<Car> findAllByBrandIdIs(int id){
+        return carRepository.findAllByBrandIdIs(id);
+    }
 }

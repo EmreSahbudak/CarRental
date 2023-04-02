@@ -30,5 +30,8 @@ public class CarController {
     public ResponseEntity<List<Car>> findAllByNameContainingIgnoreCase(String name){
         return ResponseEntity.ok(carService.findAllByNameContainingIgnoreCase(name));
     }
-
+    @GetMapping("/find-all-brand-id")
+    public ResponseEntity<List<Car>> findAllByBrandIdIs(int id){
+        return ResponseEntity.ok(carService.findAllByBrandIdIs(id));
+    }
 }
