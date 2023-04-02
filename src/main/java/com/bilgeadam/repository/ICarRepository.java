@@ -2,6 +2,7 @@ package com.bilgeadam.repository;
 
 import com.bilgeadam.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,4 +15,9 @@ public interface ICarRepository extends JpaRepository<Car,Long> {
     List<Car> findAllByBrandIdIs(int id);
 
     List<Car> findAllByColorIdIs(int id);
+
+    @Query("select c.colorId,c.brandId from Car as c" )
+    List<Car> filterCarOnlyColorAndBrand();
+
+    List<Car> findAllByDailyPriceLessThanEqual(int price);
 }

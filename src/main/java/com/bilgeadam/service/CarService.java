@@ -30,4 +30,38 @@ public class CarService extends ServiceManager<Car,Long> {
     public List<Car> findAllByColorIdIs(int id){
         return carRepository.findAllByColorIdIs(id);
     }
+    public List<Car> filterCarOnlyColorAndBrand(){
+        return carRepository.filterCarOnlyColorAndBrand();
+    }
+    public List<Car> findAllByDailyPriceLessThanEqual(int price){
+        return carRepository.findAllByDailyPriceLessThanEqual(price);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

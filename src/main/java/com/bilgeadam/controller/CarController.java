@@ -38,6 +38,14 @@ public class CarController {
     public ResponseEntity<List<Car>> findAllByColorIdIs(int id){
         return ResponseEntity.ok(carService.findAllByColorIdIs(id));
     }
+    @GetMapping("/show-car-only-brand-color")
+    public ResponseEntity<List<Car>> filterCarOnlyColorAndBrand(){
+        return ResponseEntity.ok(carService.filterCarOnlyColorAndBrand());
+    }
+    @GetMapping("/find-all-less-price")
+    public ResponseEntity<List<Car>> findAllByDailyPriceLessThanEqual(int price){
+        return ResponseEntity.ok(carService.findAllByDailyPriceLessThanEqual(price));
+    }
 
 
 

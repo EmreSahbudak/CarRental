@@ -21,7 +21,7 @@ public class Car {
     private Long id;
     private String name;
     private String modelYear;
-    private String dailyPrice;
+    private int dailyPrice;
     private String description;
 
     private Integer brandId;
