@@ -34,4 +34,38 @@ public class CarController {
     public ResponseEntity<List<Car>> findAllByBrandIdIs(int id){
         return ResponseEntity.ok(carService.findAllByBrandIdIs(id));
     }
+    @GetMapping("/find-all-color-id")
+    public ResponseEntity<List<Car>> findAllByColorIdIs(int id){
+        return ResponseEntity.ok(carService.findAllByColorIdIs(id));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

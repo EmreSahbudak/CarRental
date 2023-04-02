@@ -12,4 +12,6 @@ public interface ICarRepository extends JpaRepository<Car,Long> {
     List<Car> findAllByNameContainingIgnoreCase(String name);
 
     List<Car> findAllByBrandIdIs(int id);
+
+    List<Car> findAllByColorIdIs(int id);
 }
