@@ -13,3 +13,4 @@ public class SaveBrandRequestDto {
     private String name;
     private String companyName;
 }
+
