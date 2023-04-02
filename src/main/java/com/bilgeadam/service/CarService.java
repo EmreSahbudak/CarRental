@@ -7,6 +7,8 @@ import com.bilgeadam.repository.ICarRepository;
 import com.bilgeadam.utility.ServiceManager;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CarService extends ServiceManager<Car,Long> {
 
@@ -18,5 +20,8 @@ public class CarService extends ServiceManager<Car,Long> {
     }
     public Car save(SaveCarRequestDto dto){
         return save(ICarMapper.INSTANCE.toCar(dto));
+    }
+    public List<Car> findAllByNameContainingIgnoreCase(String name){
+        return carRepository.findAllByNameContainingIgnoreCase(name);
     }
 }
