@@ -16,7 +16,7 @@ public interface ICarRepository extends JpaRepository<Car,Long> {
 
     List<Car> findAllByColorIdIs(int id);
 
-    @Query("select c.colorId,c.brandId from Car as c" )
+    @Query(value = "select * from tblcar as c" ,nativeQuery = true)
     List<Car> filterCarOnlyColorAndBrand();
 
     List<Car> findAllByDailyPriceLessThanEqual(int price);
